@@ -1660,24 +1660,47 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* Intro Section Layout */
+/* Intro Section */
 .intro-container {
-  display: flex;
-  align-items: center;   /* aligns image + text vertically */
-  gap: 20px;             /* space between image and text */
-  flex-wrap: wrap;       /* ensures it adjusts for smaller screens */
+    display: flex;
+    align-items: flex-start;
+    gap: 40px; /* space between image and text */
+    flex-wrap: wrap; /* ensures stacking on smaller screens */
+    margin-top: 20px;
+}
+
+.intro-image {
+    flex: 0 0 250px; /* fixed width for the image */
 }
 
 .intro-image img {
-  width: 200px;          /* set a good size for your picture */
-  height: auto;          /* keeps proportions */
-  border-radius: 50%;    /* makes it circular – optional! */
-  object-fit: cover;     /* keeps image nicely cropped */
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* makes the image circular */
+    object-fit: cover; /* ensures image fills the circle without distortion */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* subtle shadow for depth */
 }
 
 .intro-text {
-  max-width: 600px;      /* keeps text from going too wide */
+    flex: 1; /* takes remaining width */
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .intro-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .intro-image {
+        margin-bottom: 20px;
+    }
+}
+
 
 /* Contact icons section */
 .contact-icons {
@@ -1701,4 +1724,5 @@ input, select, textarea {
 .contact-icons .icons li a:hover {
   color: #00bcd4; /* highlight colour when hovered */
 }
+
 
