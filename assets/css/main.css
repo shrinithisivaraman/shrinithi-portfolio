@@ -1733,47 +1733,67 @@ input, select, textarea {
 }
 
 /* Skills Section */
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;   /* Center the badges */
-    gap: 20px;
-    margin: 30px 0;
+#skills {
+    padding: 50px 20px;
+    background-color: #111;
+    color: #fff;
 }
 
+/* Each category block */
+.skills-category-section {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Category Heading */
+.skills-category {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Badges container */
 .skills-badges {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
 }
 
+/* Individual Badge */
 .skill-badge {
     display: flex;
-    flex-direction: column; /* Stack image above text
-
-}
-.skills-category-section {
-    margin-bottom: 40px; /* Space between categories */
-    text-align: center;   /* Center category heading and badges */
-}
-
-.skills-category {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: #ffffff;       /* White text for dark background */
+    align-items: center;
+    gap: 10px;
+    background-color: #222;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 25px;
+    font-size: 14px;
+    transition: transform 0.2s, background-color 0.2s;
 }
 
-.skills-badges {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
+/* Badge icons */
+.skill-badge img {
+    width: 28px;
+    height: 28px;
 }
 
+/* Hover effect */
+.skill-badge:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
 
+/* Responsive for small screens */
+@media (max-width: 768px) {
+    .skills-badges {
+        justify-content: center;
+    }
 
-
-
-
+    .skill-badge {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+}
