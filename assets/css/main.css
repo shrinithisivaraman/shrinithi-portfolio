@@ -1753,6 +1753,25 @@ input, select, textarea {
     flex-direction: column; /* Stack image above text
 
 }
+.skills-category-section {
+    margin-bottom: 40px; /* Space between categories */
+    text-align: center;   /* Center category heading and badges */
+}
+
+.skills-category {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ffffff;       /* White text for dark background */
+}
+
+.skills-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
 
 
 
