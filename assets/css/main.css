@@ -1678,3 +1678,26 @@ input, select, textarea {
 .intro-text {
   max-width: 600px;      /* keeps text from going too wide */
 }
+
+/* Contact icons section */
+.contact-icons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact-icons .icons {
+  display: inline-flex;
+  gap: 25px; /* spacing between icons */
+  list-style: none;
+  padding: 0;
+}
+
+.contact-icons .icons li a {
+  font-size: 2rem; /* makes icons bigger */
+  color: #ffffff; /* white icons */
+  transition: color 0.3s ease;
+}
+
+.contact-icons .icons li a:hover {
+  color: #00bcd4; /* highlight colour when hovered */
+}
