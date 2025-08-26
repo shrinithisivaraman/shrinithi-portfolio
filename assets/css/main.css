@@ -1660,30 +1660,21 @@ input, select, textarea {
 			opacity: 0;
 		}
 
+/* Intro Section Layout */
 .intro-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 30px; /* space between image and text */
-    margin-top: 20px;
-}
-
-.intro-image {
-    flex: 1 1 250px; /* image takes up space but can shrink */
-    text-align: center;
+  display: flex;
+  align-items: center;   /* aligns image + text vertically */
+  gap: 20px;             /* space between image and text */
+  flex-wrap: wrap;       /* ensures it adjusts for smaller screens */
 }
 
 .intro-image img {
-    max-width: 100%;
-    border-radius: 10px; /* rounded corners */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* subtle shadow */
+  width: 200px;          /* set a good size for your picture */
+  height: auto;          /* keeps proportions */
+  border-radius: 50%;    /* makes it circular – optional! */
+  object-fit: cover;     /* keeps image nicely cropped */
 }
 
 .intro-text {
-    flex: 2 1 500px; /* text takes up more space */
-}
-
-.intro-text p {
-    margin-bottom: 15px;
-    line-height: 1.6;
+  max-width: 600px;      /* keeps text from going too wide */
 }
