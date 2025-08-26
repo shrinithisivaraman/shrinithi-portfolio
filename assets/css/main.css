@@ -1734,48 +1734,25 @@ input, select, textarea {
 
 /* Skills Section */
 .skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;   /* Center the badges */
+    gap: 20px;
+    margin: 30px 0;
 }
 
 .skills-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .skill-badge {
-  display: flex;
-  align-items: center;
-  background-color: #222;
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 14px;
-  gap: 8px;
-  transition: transform 0.2s, background-color 0.2s;
-}
+    display: flex;
+    flex-direction: column; /* Stack image above text
 
-.skill-badge img {
-  width: 24px;
-  height: 24px;
 }
-
-/* Hover effect */
-.skill-badge:hover {
-  background-color: #555;
-  transform: translateY(-2px);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .skills-container, .skills-badges {
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-
 
 
 
