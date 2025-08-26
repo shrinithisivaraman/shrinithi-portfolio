@@ -1683,7 +1683,7 @@ input, select, textarea {
 .intro-text {
     flex: 1;                  /* Take remaining space */
     font-weight: 400;         /* Ensures consistent weight */
-    color: #333333;           /* Neutral dark grey text */
+    color: #ffffff;           /* White text */
     line-height: 1.6;
     font-size: 16px;
 }
@@ -1731,6 +1731,7 @@ input, select, textarea {
 .contact-icons .icons li a:hover {
   color: #00bcd4; /* highlight colour when hovered */
 }
+
 
 
 
