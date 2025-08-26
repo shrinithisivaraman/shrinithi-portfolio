@@ -1732,7 +1732,7 @@ input, select, textarea {
   color: #00bcd4; /* highlight colour when hovered */
 }
 
-/* Skills Section */
+/* About Section */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -1775,6 +1775,7 @@ input, select, textarea {
     justify-content: center;
   }
 }
+
 
 
 
