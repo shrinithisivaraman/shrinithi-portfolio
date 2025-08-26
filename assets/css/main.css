@@ -1733,14 +1733,21 @@ input, select, textarea {
 }
 
 /* Skills Section */
+#skills {
+    padding: 40px 20px;
+}
+
 .skills-category-section {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .skills-category-section h3 {
-    color: #fff;
-    margin-bottom: 12px;
-    font-weight: 600;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
 }
 
 .skills-badges {
@@ -1754,11 +1761,12 @@ input, select, textarea {
     align-items: center;
     background-color: #222;
     color: #fff;
-    padding: 6px 12px;
-    border-radius: 20px;
+    padding: 8px 16px;
+    border-radius: 25px;
     font-size: 14px;
     gap: 8px;
     transition: transform 0.2s, background-color 0.2s;
+    white-space: nowrap; /* prevents line breaks in pill */
 }
 
 .skill-badge img {
@@ -1775,5 +1783,14 @@ input, select, textarea {
 @media (max-width: 768px) {
     .skills-badges {
         justify-content: center;
+    }
+
+    .skill-badge {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+
+    .skills-category-section h3 {
+        text-align: center;
     }
 }
