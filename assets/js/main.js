@@ -402,31 +402,27 @@
 })(jQuery);
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Top-level tabs
+    // ------------------ Top-level Tabs ------------------
     const tabButtons = document.querySelectorAll(".tab button");
     const tabContents = document.querySelectorAll(".tabcontent");
 
     tabButtons.forEach(btn => {
         btn.addEventListener("click", function () {
-            // Hide all contents
-            tabContents.forEach(tc => tc.style.display = "none");
             tabButtons.forEach(b => b.classList.remove("active"));
+            tabContents.forEach(tc => tc.style.display = "none");
 
-            // Show selected tab
             this.classList.add("active");
             const category = this.getAttribute("data-category");
             const catContent = document.getElementById(category);
-            if(catContent) {
-                catContent.style.display = "block";
+            if (catContent) catContent.style.display = "block";
 
-                // Click first subtab automatically
-                const firstSub = catContent.querySelector(".subtab button");
-                if(firstSub) firstSub.click();
-            }
+            // Open first subtab automatically
+            const firstSub = catContent.querySelector(".subtab button");
+            if (firstSub) firstSub.click();
         });
     });
 
-    // Sub-tabs
+    // ------------------ Sub-tabs ------------------
     const subtabButtons = document.querySelectorAll(".subtab button");
 
     subtabButtons.forEach(btn => {
@@ -441,10 +437,10 @@ document.addEventListener("DOMContentLoaded", function () {
             this.classList.add("active");
             const project = this.getAttribute("data-project");
             const projectContent = document.getElementById(project);
-            if(projectContent) projectContent.style.display = "block";
+            if (projectContent) projectContent.style.display = "block";
         });
     });
 
-    // Open first top-level tab by default
-    if(tabButtons.length > 0) tabButtons[0].click();
+    // ------------------ Open first top-level tab ------------------
+    if (tabButtons.length > 0) tabButtons[0].click();
 });
