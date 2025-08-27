@@ -1795,65 +1795,52 @@ input, select, textarea {
     }
 	
 }
-/* ------------------ Tabs ------------------ */
-.tab {
+
+/* Tabs styling */
+.tab, .subtab {
   display: flex;
   gap: 10px;
   margin-bottom: 1rem;
 }
 
-.tab button {
-  background-color: #333; /* dark grey to match your theme */
-  border: none;
-  padding: 8px 20px;
-  cursor: pointer;
-  font-weight: 500;
-  border-radius: 5px;
+.tab button, .subtab button {
+  background-color: #333;
   color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 20px;
   transition: background 0.3s;
 }
 
-.tab button:hover {
+.tab button:hover, .subtab button:hover {
   background-color: #444;
 }
 
-.tab button.active {
-  background-color: #2a9df4; /* blue highlight */
-  color: #fff;
-}
-
-/* Sub-tabs */
-.subtab {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 1rem;
-}
-
-.subtab button {
-  background-color: #444;
-  border: none;
-  padding: 6px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-  color: #fff;
-  transition: background 0.3s;
-}
-
-.subtab button:hover {
-  background-color: #555;
-}
-
-.subtab button.active {
+.tab button.active, .subtab button.active {
   background-color: #2a9df4;
-  color: white;
 }
 
-/* Tab and Subtab Content */
+/* Hide browser focus blue outline */
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Tab content hidden by default */
 .tabcontent,
 .subtabcontent {
   display: none;
-  padding: 15px;
+  padding-top: 15px;
   color: #fff;
-  background: transparent; /* no white box, matches site */
 }
 
+/* Image improvements */
+.subtabcontent img {
+  max-width: 80%;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
