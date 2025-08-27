@@ -1795,106 +1795,137 @@ input, select, textarea {
     }
 	
 }
-
-/* ---------------- Work Section ---------------- */
+/* ------------------ Work Section ------------------ */
 
 #work {
-  background-color: #1b1b1b; /* match other sections like intro/contact */
-  color: #ffffff;
-  padding: 50px 20px;
+    padding: 50px 20px;
+    background-color: #1a1a1a; /* change to match intro/contact background */
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
 }
 
+#work h2.major {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+/* Category Pills */
 .work-categories {
-  text-align: center;
-  margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
 }
 
 .work-pill {
-  display: inline-block;
-  background-color: #333333;
-  color: #ffffff;
-  padding: 10px 25px;
-  margin: 5px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background 0.3s;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2a2a2a; /* pill color */
+    color: #ffffff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s, color 0.3s;
 }
 
 .work-pill:hover {
-  background-color: #555555;
+    background-color: #00bcd4;
+    color: #000000;
 }
 
+/* Category Sections */
 .category-section {
-  display: none; /* hidden by default */
-  margin-top: 30px;
+    display: none;
+    margin-bottom: 60px;
 }
 
 .category-section:target {
-  display: block; /* show when clicked */
+    display: block;
 }
 
+/* Project Links */
 .project-link {
-  display: inline-block;
-  background-color: #444444;
-  color: #ffffff;
-  padding: 8px 20px;
-  margin: 8px 0;
-  border-radius: 20px;
-  text-decoration: none;
-  transition: background 0.3s;
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 15px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s, color 0.3s;
 }
 
 .project-link:hover {
-  background-color: #666666;
+    background-color: #00bcd4;
+    color: #000000;
 }
 
+/* Project Content */
 .project-content {
-  display: none;
-  margin-top: 20px;
-  padding: 20px;
-  background-color: #222222;
-  border-radius: 10px;
+    display: none;
+    margin-top: 20px;
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .project-content:target {
-  display: block;
+    display: block;
 }
 
-.project-description {
-  margin-bottom: 20px;
-  line-height: 1.6;
+/* Project Description */
+.project-description p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Project Images */
+.project-images {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .project-images figure {
-  margin-bottom: 20px;
-  text-align: center;
+    margin: 0;
 }
 
 .project-images img {
-  width: 80%;
-  max-width: 600px;
-  border-radius: 5px;
-  margin-bottom: 5px;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .project-images figcaption {
-  font-size: 0.9rem;
-  color: #cccccc;
-  margin-bottom: 15px;
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #cccccc;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .work-pill, .project-link {
-    width: 90%;
-    display: block;
-    text-align: center;
-    margin: 10px auto;
-  }
+    .work-categories {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .project-images img {
-    width: 100%;
-  }
+    .work-pill, .project-link {
+        width: 80%;
+        text-align: center;
+    }
+
+    .project-images img {
+        width: 100%;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
 }
 
