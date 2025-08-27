@@ -1796,3 +1796,105 @@ input, select, textarea {
 	
 }
 
+/* ---------------- Work Section ---------------- */
+
+#work {
+  background-color: #1b1b1b; /* match other sections like intro/contact */
+  color: #ffffff;
+  padding: 50px 20px;
+}
+
+.work-categories {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.work-pill {
+  display: inline-block;
+  background-color: #333333;
+  color: #ffffff;
+  padding: 10px 25px;
+  margin: 5px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.work-pill:hover {
+  background-color: #555555;
+}
+
+.category-section {
+  display: none; /* hidden by default */
+  margin-top: 30px;
+}
+
+.category-section:target {
+  display: block; /* show when clicked */
+}
+
+.project-link {
+  display: inline-block;
+  background-color: #444444;
+  color: #ffffff;
+  padding: 8px 20px;
+  margin: 8px 0;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.project-link:hover {
+  background-color: #666666;
+}
+
+.project-content {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #222222;
+  border-radius: 10px;
+}
+
+.project-content:target {
+  display: block;
+}
+
+.project-description {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.project-images figure {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.project-images img {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.project-images figcaption {
+  font-size: 0.9rem;
+  color: #cccccc;
+  margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .work-pill, .project-link {
+    width: 90%;
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+  }
+
+  .project-images img {
+    width: 100%;
+  }
+}
+
