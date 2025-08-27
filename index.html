@@ -62,32 +62,51 @@
 
 						<!-- Work Section -->
                             <article id="work">
-                            <h2 class="major">Work</h2>
+                                <h2 class="major">Work</h2>
 
-                            <!-- Software Tabs -->
-                            <div class="tab">
-                            <button class="tablinks" data-category="SPSS">SPSS</button>
-                            <!-- Future software categories go here (e.g. Python, Tableau) -->
-                            </div>
+                                <!-- Software category tabs -->
+                                <div class="tab">
+                                <button data-category="SPSS">SPSS</button>
+                                </div>
 
-                            <!-- SPSS Category Content -->
-                            <div id="SPSS" class="tabcontent">
-                            <h3>SPSS Projects</h3>
+                                <!-- Content for SPSS -->
+                                <div id="SPSS" class="tabcontent">
+                                <h3>SPSS Projects</h3>
 
-                            <!-- Project Subtabs -->
-                            <div class="subtab">
-                            <button class="subtablinks" data-project="AIQ">AIQ Project</button>
-                            <!-- Add more SPSS projects here -->
-                            </div>
+                                <!-- Projects under SPSS -->
+                                <div class="subtab">
+                                <button data-project="AIQ">AIQ Project</button>
+                                </div>
 
-                            <!-- AIQ Project Content -->
-                            <div id="AIQ" class="subtabcontent">
-                            <h3>AIQ International Sales Analysis</h3>
-                            <p>This is placeholder content for the AIQ project.  
-                            Once tabs are working, we’ll add full details (objectives, outcomes, analysis explanations, and images).</p>
-                            </div>
-                            </div>
-                            </article>
+                                <!-- AIQ Project Details -->
+                                <div id="AIQ" class="subtabcontent">
+                                <h3>AIQ International Sales Analysis</h3>
+                                <p><strong>Objective:</strong> Predict international sales profitability and highlight target customer segments for international expansion.</p>
+                                <p><strong>Tools & Methods:</strong> SPSS, Artificial Neural Networks, Cluster Analysis, Crosstabulation, Profitability Analysis.</p>
+
+                               <h4>ANN Analysis – Key Profit Drivers</h4>
+                               <p>The ANN model revealed that quantity sold and unit price were the strongest drivers of profitability.</p>
+                               <img src="images/ann_model1.png" alt="Initial ANN Model Summary" />
+                               <img src="images/ann_model2.png" alt="Tuned ANN Model Summary" />
+                               <img src="images/ann_predictor_importance.png" alt="ANN Predictor Importance" />
+
+                               <h4>Profitability Overview</h4>
+                               <p>Germany, France, and Eire emerged as the most profitable non-UK markets. Gift Vouchers were identified as the most profitable product.</p>
+                               <img src="images/crosstab_uk_nonuk.png" alt="UK vs Non-UK Profitability" />
+                               <img src="images/crosstab_top_countries.png" alt="Top Non-UK Countries Profitability" />
+                               <img src="images/product_profitability.png" alt="Product Profitability" />
+
+                               <h4>Customer Segmentation Insights</h4>
+                               <p>Cluster Analysis identified growth potential within Cluster 2 among non-UK customers.</p>
+                               <img src="images/cluster_summary_initial.png" alt="Initial Cluster Summary" />
+                               <img src="images/cluster_sizes_initial.png" alt="Initial Cluster Sizes" />
+                               <img src="images/cluster_characteristics.png" alt="Cluster Characteristics Table" />
+                               <img src="images/cluster_summary_tuned.png" alt="Tuned Cluster Summary" />
+                               <img src="images/cluster_sizes_tuned.png" alt="Tuned Cluster Sizes" />
+                               </div>
+                               </div>
+                               </article>
+
 
 						<!-- Skills -->
                             <article id="skills">
@@ -439,6 +458,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 	</body>
 </html>
+
 
 
 
