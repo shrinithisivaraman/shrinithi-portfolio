@@ -429,4 +429,3 @@ function openProject(evt, projectName) {
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementsByClassName("tablinks")[0].click();
 });
-
