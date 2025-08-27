@@ -401,51 +401,51 @@
 
 })(jQuery);
 
-document.addEventListener("DOMContentLoaded", function() {
-  // Top-level tab buttons
+document.addEventListener("DOMContentLoaded", function () {
+  // ------------------ Top-level Tabs (Software) ------------------
   const tabButtons = document.querySelectorAll(".tab button");
   const tabContents = document.querySelectorAll(".tabcontent");
 
-  tabButtons.forEach(btn => {
-    btn.addEventListener("click", function() {
-      const category = this.dataset.category;
+  tabButtons.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      // Reset
+      tabButtons.forEach((b) => b.classList.remove("active"));
+      tabContents.forEach((tc) => (tc.style.display = "none"));
 
-      // Hide all tab contents
-      tabContents.forEach(tc => tc.style.display = "none");
-      tabButtons.forEach(b => b.classList.remove("active"));
-
-      // Show selected tab
-      const selected = document.getElementById(category);
-      if (selected) selected.style.display = "block";
+      // Activate
       this.classList.add("active");
+      const category = this.getAttribute("data-category");
+      const catContent = document.getElementById(category);
+      if (catContent) catContent.style.display = "block";
 
-      // Auto-click first subtab
-      const firstSub = selected.querySelector(".subtab button");
+      // Auto-open first subtab
+      const firstSub = catContent.querySelector(".subtab button");
       if (firstSub) firstSub.click();
     });
   });
 
-  // Subtab buttons
+  // ------------------ Sub-tabs (Projects) ------------------
   const subtabButtons = document.querySelectorAll(".subtab button");
 
-  subtabButtons.forEach(btn => {
-    btn.addEventListener("click", function() {
+  subtabButtons.forEach((btn) => {
+    btn.addEventListener("click", function () {
       const parent = this.closest(".tabcontent");
       const subs = parent.querySelectorAll(".subtabcontent");
       const subButtons = parent.querySelectorAll(".subtab button");
 
-      // Hide all subtab content
-      subs.forEach(s => s.style.display = "none");
-      subButtons.forEach(b => b.classList.remove("active"));
+      // Reset
+      subs.forEach((s) => (s.style.display = "none"));
+      subButtons.forEach((b) => b.classList.remove("active"));
 
-      // Show selected subtab content
-      const project = this.dataset.project;
+      // Activate
+      this.classList.add("active");
+      const project = this.getAttribute("data-project");
       const projectContent = document.getElementById(project);
       if (projectContent) projectContent.style.display = "block";
-      this.classList.add("active");
     });
   });
 
-  // Open first top-level tab by default
+  // ------------------ Default Open First Tab ------------------
   if (tabButtons.length > 0) tabButtons[0].click();
 });
+
