@@ -410,6 +410,7 @@ function openCategory(evt, categoryName) {
     document.getElementById(categoryName).style.display = "block";
     evt.currentTarget.className += " active";
 
+    // Open first project in this category automatically
     var firstSubtab = document.querySelector('#' + categoryName + ' .subtab .subtablinks');
     if (firstSubtab) firstSubtab.click();
 }
@@ -424,6 +425,8 @@ function openProject(evt, projectName) {
     evt.currentTarget.className += " active";
 }
 
+// Open first category by default
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementsByClassName("tablinks")[0].click();
 });
+
