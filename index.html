@@ -60,13 +60,105 @@
                             </article>
         
 
-						<!-- Work -->
-							<article id="work">
-								<h2 class="major">Work</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
-							</article>
+						<!-- Work Section -->
+                            <article id="work">
+                            <h2 class="major">Work</h2>
+
+                            <!-- Top-level category pill -->
+                            <div class="tab">
+                            <button class="tablinks" onclick="openCategory(event, 'SPSS')">SPSS</button>
+                            <!-- Add more categories here later -->
+                            </div>
+
+                            <!-- SPSS Category Content -->
+                            <div id="SPSS" class="tabcontent">
+
+                            <!-- Nested project pills -->
+                            <div class="subtab">
+                            <button class="subtablinks" onclick="openProject(event, 'AIQ')">AIQ Project</button>
+                            <!-- Add more SPSS projects here -->
+                            </div>
+
+                            <!-- AIQ Project Content -->
+                            <div id="AIQ" class="subtabcontent">
+                            <h3>AIQ International Sales Analysis</h3>
+
+                            <!-- Project Summary -->
+                            <div class="project-summary">
+                            <p><strong>Objective:</strong> Predict international sales profitability and identify high-value customer segments for AIQ Limited.</p>
+                            <p><strong>Problem Solved:</strong> Determined which countries and products contribute most to profitability, supporting AIQ’s strategic goals of internationalisation, growth, and innovation.</p>
+                            <p><strong>Approach & Methods:</strong> Built ANN models, conducted Two-Step Cluster Analysis, and performed Crosstab/Product profitability analyses in SPSS.</p>
+                            <p><strong>Key Insights:</strong> Quantity and Unit Price are key predictors; Cluster 2 identified as the optimal non-UK segment; Germany, France, and Eire are the target markets; Gift Vouchers are the most profitable product.</p>
+                            <p><strong>Outcome:</strong> Delivered actionable insights guiding AIQ’s internationalisation strategy.</p>
+                            </div>
+
+                            <!-- ANN Model Screenshots -->
+                            <h4>ANN Analysis</h4>
+                            <span class="image main"><img src="images/ann_model1.png" alt="Initial ANN Model Summary" /></span>
+                            <span class="image main"><img src="images/ann_model2.png" alt="Tuned ANN Model Summary" /></span>
+                            <span class="image main"><img src="images/ann_predictor_importance.png" alt="Predictor Importance Table" /></span>
+
+                            <!-- Crosstab/Profitability -->
+                            <h4>Profitability Analysis</h4>
+                            <span class="image main"><img src="images/crosstab_uk_nonuk.png" alt="UK vs Non-UK Profitability" /></span>
+                            <span class="image main"><img src="images/crosstab_top_countries.png" alt="Top Non-UK Countries Profitability" /></span>
+                            <span class="image main"><img src="images/product_profitability.png" alt="Product Profitability" /></span>
+
+                            <!-- Cluster Analysis -->
+                            <h4>Cluster Analysis</h4>
+                            <span class="image main"><img src="images/cluster_summary_initial.png" alt="Initial Cluster Summary" /></span>
+                            <span class="image main"><img src="images/cluster_sizes_initial.png" alt="Initial Cluster Sizes" /></span>
+                            <span class="image main"><img src="images/cluster_characteristics.png" alt="Cluster Characteristics Table" /></span>
+                            <span class="image main"><img src="images/cluster_summary_tuned.png" alt="Tuned Cluster Summary" /></span>
+                            <span class="image main"><img src="images/cluster_sizes_tuned.png" alt="Tuned Cluster Sizes" /></span>
+
+                            <!-- Tools and Outcome -->
+                            <p><strong>Tools & Methods:</strong> SPSS, ANN, Two-Step Cluster Analysis, Crosstabulation.</p>
+                            <ul>
+                            <li>Built ANN models predicting profitability; Quantity and Unit Price were key predictors.</li>
+                            <li>Performed cluster analysis; Cluster 2 identified as the optimal non-UK target segment.</li>
+                            <li>Cross-tabulated predicted profitability with countries; recommended Germany, France, and Eire.</li>
+                            <li>Analysed product profitability; Gift Vouchers identified as the most profitable product.</li>
+                            </ul>
+                            <p><strong>Outcome:</strong> Delivered actionable insights supporting AIQ’s internationalisation and product strategy.</p>
+                            <p><a href="https://github.com/yourusername/AIQ_International_Sales_Analysis" target="_blank">View Project on GitHub</a></p>
+                            </div>
+
+                            </div>
+                            </article>
+
+                        <!-- JavaScript for Tabs -->
+                            <script>
+                            function openCategory(evt, categoryName) {
+                            var i, tabcontent, tablinks;
+                            tabcontent = document.getElementsByClassName("tabcontent");
+                            for (i = 0; i < tabcontent.length; i++) tabcontent[i].style.display = "none";
+                            tablinks = document.getElementsByClassName("tablinks");
+                            for (i = 0; i < tablinks.length; i++) tablinks[i].className = tablinks[i].className.replace(" active", "");
+                            document.getElementById(categoryName).style.display = "block";
+                            evt.currentTarget.className += " active";
+
+                            // Automatically open first project
+                            var firstSubtab = document.querySelector('#' + categoryName + ' .subtab .subtablinks');
+                            if (firstSubtab) firstSubtab.click();
+                            }
+
+                            function openProject(evt, projectName) {
+                            var i, subtabcontent, subtablinks;
+                            subtabcontent = document.getElementsByClassName("subtabcontent");
+                            for (i = 0; i < subtabcontent.length; i++) subtabcontent[i].style.display = "none";
+                            subtablinks = document.getElementsByClassName("subtablinks");
+                            for (i = 0; i < subtablinks.length; i++) subtablinks[i].className = subtablinks[i].className.replace(" active", "");
+                            document.getElementById(projectName).style.display = "block";
+                            evt.currentTarget.className += " active";
+                            }
+
+                            // Open first category by default
+                            document.addEventListener("DOMContentLoaded", function() {
+                            document.getElementsByClassName("tablinks")[0].click();
+                            });
+                            </script>
+
 
 						<!-- Skills -->
                             <article id="skills">
@@ -418,6 +510,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 	</body>
 </html>
+
 
 
 
