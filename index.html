@@ -64,7 +64,7 @@
                           <article id="work">
                           <h2 class="major">Work</h2>
 
-                          <!-- Top-level category tabs -->
+                          <!-- Top-level category pills -->
                           <div class="tab">
                           <button class="tablinks" data-category="SPSS">SPSS</button>
                           </div>
@@ -72,92 +72,70 @@
                           <!-- SPSS category content -->
                           <div id="SPSS" class="tabcontent">
 
-                          <!-- Nested project tabs (sub-pills) -->
+                          <!-- Nested project pills -->
                           <div class="subtab">
                           <button class="subtablinks" data-project="AIQ">AIQ Project</button>
                           </div>
 
                           <!-- AIQ Project content -->
                           <div id="AIQ" class="subtabcontent">
-            
+                          <section class="project">
                           <h3>AIQ International Sales Analysis</h3>
+                          <p><strong>Objective:</strong> Predict international sales profitability and identify high-value customer segments for AIQ Limited.</p>
+                          <p><strong>Tools & Methods:</strong> SPSS, ANN, Two-Step Cluster, Crosstab, Product Profitability.</p>
+                          <p><strong>Outcome:</strong> Insights on target markets, key products, and optimal customer segments.</p>
+                          </section>
 
-                          <!-- Project Summary -->
-                          <div class="project-summary">
-                          <p><strong>Objective:</strong> Help AIQ Limited identify profitable international markets and key products to drive growth.</p>
-                          <p><strong>Tools & Methods:</strong> SPSS, Artificial Neural Networks (ANN), Two-Step Cluster Analysis, Crosstabulation, Product Profitability Analysis.</p>
-                          <p><strong>Outcome:</strong> Actionable insights: target markets (Germany, France, Eire), high-value products (Gift Vouchers), and optimal customer segments for international expansion.</p>
-                          </div>
-
-                          <!-- ANN Analysis -->
-                          <div class="analysis-summary">
-                          <h4>1. ANN Analysis – Predicting International Profitability</h4>
-                          <p>The Artificial Neural Network predicted which international sales would be most profitable. Quantity and Unit Price were found to be the most important factors influencing profit.</p>
-                          </div>
-                          <div class="image">
+                          <section class="analysis">
+                          <h4>1. ANN Analysis</h4>
+                          <p>Predicted profitability of international sales. Quantity and Unit Price were most important.</p>
+                          <figure>
                           <img src="images/ann_model1.png" alt="Initial ANN Model Summary">
-                          <figcaption>Initial ANN model showing predicted profit vs actual.</figcaption>
-                          </div>
-                          <div class="image">
+                          <figcaption>Initial ANN model showing predicted vs actual profits.</figcaption>
+                          </figure>
+                          <figure>
                           <img src="images/ann_model2.png" alt="Tuned ANN Model Summary">
-                          <figcaption>Tuned ANN model improves accuracy for forecasting profitable markets.</figcaption>
-                          </div>
-                          <div class="image">
+                          <figcaption>Tuned model improved accuracy for forecasting profitable markets.</figcaption>
+                          </figure>
+                          <figure>
                           <img src="images/ann_predictor_importance.png" alt="ANN Predictor Importance">
                           <figcaption>Key predictors of profitability identified by ANN.</figcaption>
-                          </div>
+                          </figure>
+                          </section>
 
-                          <!-- Profitability & Crosstab Analysis -->
-                          <div class="analysis-summary">
-                          <h4>2. Profitability & Crosstab Analysis</h4>
-                          <p>Compared UK vs non-UK sales to identify high-value international markets. Germany, France, and Eire emerged as the most profitable non-UK markets. Gift Vouchers were highlighted as a key product driving profits.</p>
-                          </div>
-                          <div class="image">
+                          <section class="analysis">
+                          <h4>2. Profitability & Crosstab</h4>
+                          <p>Identified top non-UK markets and high-profit products.</p>
+                          <figure>
                           <img src="images/crosstab_uk_nonuk.png" alt="UK vs Non-UK Profitability">
-                          <figcaption>Comparison of UK vs non-UK sales profitability.</figcaption>
-                          </div>
-                          <div class="image">
+                          <figcaption>Comparison of UK vs non-UK profitability.</figcaption>
+                          </figure>
+                          <figure>
                           <img src="images/crosstab_top_countries.png" alt="Top Non-UK Countries Profitability">
-                          <figcaption>Top non-UK countries contributing to profitability.</figcaption>
-                          </div>
-                          <div class="image">
+                          <figcaption>Top non-UK countries driving profitability.</figcaption>
+                          </figure>
+                          <figure>
                           <img src="images/product_profitability.png" alt="Product Profitability">
-                          <figcaption>Profitability of top products, highlighting Gift Vouchers.</figcaption>
-                          </div>
+                          <figcaption>Gift Vouchers emerged as key product driving profits.</figcaption>
+                          </figure>
+                          </section>
 
-                          <!-- Cluster Analysis -->
-                          <div class="analysis-summary">
-                          <h4>3. Cluster Analysis – Understanding Customer Segments</h4>
-                          <p>Segmented customers to understand buying behavior. Cluster 2 represents the prime non-UK segment for targeting international expansion.</p>
-                          </div>
-                          <div class="image">
+                          <section class="analysis">
+                          <h4>3. Cluster Analysis</h4>
+                          <p>Segmented customers; Cluster 2 identified as prime non-UK segment.</p>
+                          <figure>
                           <img src="images/cluster_summary_initial.png" alt="Initial Cluster Summary">
                           <figcaption>Initial cluster segmentation summary.</figcaption>
-                          </div>
-                          <div class="image">
+                          </figure>
+                          <figure>
                           <img src="images/cluster_sizes_initial.png" alt="Initial Cluster Sizes">
-                          <figcaption>Sizes of initial customer clusters.</figcaption>
-                          </div>
-                          <div class="image">
-                          <img src="images/cluster_characteristics.png" alt="Cluster Characteristics Table">
-                          <figcaption>Characteristics of each cluster to inform targeting strategy.</figcaption>
-                          </div>
-                          <div class="image">
-                          <img src="images/cluster_summary_tuned.png" alt="Tuned Cluster Summary">
-                          <figcaption>Tuned cluster summary after refining analysis.</figcaption>
-                          </div>
-                          <div class="image">
-                          <img src="images/cluster_sizes_tuned.png" alt="Tuned Cluster Sizes">
-                          <figcaption>Final cluster sizes to guide marketing efforts.</figcaption>
-                          </div>
+                          <figcaption>Customer distribution across clusters.</figcaption>
+                          </figure>
+                          </section>
 
-                          </div> <!-- End AIQ Project content -->
-
-                          </div> <!-- End SPSS content -->
-
+                          </div>
+                          </div>
                           </article>
-
-
 
 						<!-- Skills -->
                             <article id="skills">
@@ -509,6 +487,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 	</body>
 </html>
+
 
 
 
