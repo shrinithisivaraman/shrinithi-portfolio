@@ -1795,7 +1795,7 @@ input, select, textarea {
     }
 	
 }
-/* Project Pills */
+/* Work Section */
 .project-pills {
   display: flex;
   flex-wrap: wrap;
@@ -1806,7 +1806,7 @@ input, select, textarea {
 .project-pill {
   display: inline-block;
   padding: 10px 20px;
-  background: #2a2a2a; /* match your site's sections */
+  background: #2a2a2a;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
@@ -1823,18 +1823,18 @@ input, select, textarea {
   margin-top: 30px;
 }
 
-/* Show only the targeted project section */
+/* Show only the targeted project */
 .project-section:target {
   display: block;
 }
 
-/* Hide project pills when a project is targeted */
-.project-pills:target ~ .project-section,
-.project-section:target ~ .project-pills {
+/* Hide project pills when a project is active */
+.project-section:target ~ .project-pills,
+.project-pills:target ~ .project-section {
   display: none;
 }
 
-/* Back Links */
+/* Back links */
 .back {
   display: inline-block;
   margin-bottom: 15px;
