@@ -1795,27 +1795,6 @@ input, select, textarea {
     }
 	
 }
-/* Hide all category sections by default */
-.category-section {
-  display: none;
-  margin-top: 30px;
-}
-
-/* Show section when targeted via anchor */
-.category-section:target {
-  display: block;
-}
-
-/* Show project content when targeted */
-.project-content {
-  display: none;
-  margin-top: 20px;
-}
-
-.project-content:target {
-  display: block;
-}
-
 /* Project Pills */
 .project-pills {
   display: flex;
@@ -1827,7 +1806,7 @@ input, select, textarea {
 .project-pill {
   display: inline-block;
   padding: 10px 20px;
-  background: #2a2a2a; /* match other sections */
+  background: #2a2a2a;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
@@ -1838,15 +1817,23 @@ input, select, textarea {
   background: #444;
 }
 
-/* Project Section */
+/* Hide all project sections by default */
 .project-section {
-  display: none; /* hidden by default */
+  display: none;
   margin-top: 30px;
 }
 
-/* Show section when targeted by anchor */
+/* Show targeted project only */
 .project-section:target {
   display: block;
+}
+
+/* Back Links */
+.back {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #2a9df4;
+  text-decoration: underline;
 }
 
 /* Project Images */
@@ -1869,14 +1856,56 @@ input, select, textarea {
   color: #ddd;
   margin-top: 5px;
   line-height: 1.4;
+  text-align: center;
 }
 
-/* Back Link */
-.back {
-  display: inline-block;
+/* Stakeholder Summary */
+.project-description {
   margin-top: 20px;
-  color: #2a9df4;
-  text-decoration: underline;
+  color: #eee;
+  line-height: 1.6;
+}
+
+/* Tool Tabs */
+.tool-tabs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.tool-tabs input[type="radio"] {
+  display: none;
+}
+
+.tool-tabs label {
+  padding: 8px 16px;
+  background: #333;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.tool-tabs label:hover {
+  background: #555;
+}
+
+.tab-content {
+  display: none;
+  padding: 10px;
+  margin-top: 10px;
+  background: #222;
+  border-radius: 5px;
+  color: #ddd;
+}
+
+#tool-spss:checked ~ #spss-content,
+#tool-excel:checked ~ #excel-content,
+#tool-word:checked ~ #word-content {
+  display: block;
 }
 
 /* Responsive */
@@ -1887,5 +1916,9 @@ input, select, textarea {
   }
   .project-images img {
     max-width: 100%;
+  }
+  .tool-tabs label {
+    width: 100%;
+    text-align: center;
   }
 }
