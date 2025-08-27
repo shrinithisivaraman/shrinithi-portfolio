@@ -1816,12 +1816,14 @@ input, select, textarea {
   display: block;
 }
 
-/* Work Pills */
+/* ------------------ Work Section ------------------ */
+
+/* Main Pills */
 .work-pill {
   display: inline-block;
   padding: 10px 20px;
   margin: 5px;
-  background: #2a2a2a; /* match other sections */
+  background: #2a2a2a; /* matches other sections */
   color: #ffffff;
   border-radius: 5px;
   text-decoration: none;
@@ -1832,7 +1834,11 @@ input, select, textarea {
   background: #444;
 }
 
-/* Project Links */
+.work-pill:focus {
+  outline: none; /* removes blue highlight */
+}
+
+/* Project Links inside Categories */
 .project-link {
   display: inline-block;
   padding: 8px 16px;
@@ -1841,13 +1847,18 @@ input, select, textarea {
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
+  transition: background 0.3s;
 }
 
 .project-link:hover {
   background: #555;
 }
 
-/* Back links */
+.project-link:focus {
+  outline: none;
+}
+
+/* Back Links */
 .back {
   display: inline-block;
   margin: 10px 0;
@@ -1877,13 +1888,39 @@ input, select, textarea {
   line-height: 1.4;
 }
 
-/* Responsive */
+/* ------------------ Show/Hide Sections Using CSS :target ------------------ */
+
+/* Hide all category sections and project content by default */
+.category-section,
+.project-content {
+  display: none;
+}
+
+/* Show the targeted section */
+.category-section:target,
+.project-content:target {
+  display: block;
+}
+
+/* Show main work categories if no target is selected */
+#work:not(:target) .work-categories {
+  display: block;
+}
+
+/* Hide the main categories when a category is selected */
+.category-section:target ~ .work-categories,
+.project-content:target ~ .work-categories {
+  display: none;
+}
+
+/* ------------------ Responsive ------------------ */
 @media (max-width: 768px) {
   .work-pill,
   .project-link {
     width: 100%;
     text-align: center;
   }
+  
   .project-images img {
     max-width: 100%;
   }
