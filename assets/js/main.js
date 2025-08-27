@@ -401,31 +401,50 @@
 
 })(jQuery);
 
-function openCategory(evt, categoryName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) tabcontent[i].style.display = "none";
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) tablinks[i].className = tablinks[i].className.replace(" active", "");
-    document.getElementById(categoryName).style.display = "block";
-    evt.currentTarget.className += " active";
+document.addEventListener("DOMContentLoaded", function () {
+    // ------------------ Top-level Tabs ------------------
+    const tabButtons = document.querySelectorAll(".tab button");
+    const tabContents = document.querySelectorAll(".tabcontent");
 
-    // Open first project in this category automatically
-    var firstSubtab = document.querySelector('#' + categoryName + ' .subtab .subtablinks');
-    if (firstSubtab) firstSubtab.click();
-}
+    tabButtons.forEach((btn) => {
+        btn.addEventListener("click", function () {
+            // Remove active from all buttons and hide all tab contents
+            tabButtons.forEach((b) => b.classList.remove("active"));
+            tabContents.forEach((tc) => (tc.style.display = "none"));
 
-function openProject(evt, projectName) {
-    var i, subtabcontent, subtablinks;
-    subtabcontent = document.getElementsByClassName("subtabcontent");
-    for (i = 0; i < subtabcontent.length; i++) subtabcontent[i].style.display = "none";
-    subtablinks = document.getElementsByClassName("subtablinks");
-    for (i = 0; i < subtablinks.length; i++) subtablinks[i].className = subtablinks[i].className.replace(" active", "");
-    document.getElementById(projectName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
+            // Activate clicked button and show content
+            this.classList.add("active");
+            const category = this.getAttribute("data-category");
+            const catContent = document.getElementById(category);
+            if (catContent) catContent.style.display = "block";
 
-// Open first category by default
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementsByClassName("tablinks")[0].click();
+            // Automatically open first subtab
+            const firstSub = catContent.querySelector(".subtab button");
+            if (firstSub) firstSub.click();
+        });
+    });
+
+    // ------------------ Sub-tabs (Projects) ------------------
+    const subtabButtons = document.querySelectorAll(".subtab button");
+
+    subtabButtons.forEach((btn) => {
+        btn.addEventListener("click", function () {
+            const parent = this.closest(".tabcontent");
+            const subs = parent.querySelectorAll(".subtabcontent");
+            const subButtons = parent.querySelectorAll(".subtab button");
+
+            // Hide all subtab contents and remove active class
+            subs.forEach((s) => (s.style.display = "none"));
+            subButtons.forEach((b) => b.classList.remove("active"));
+
+            // Show clicked project content
+            this.classList.add("active");
+            const project = this.getAttribute("data-project");
+            const projectContent = document.getElementById(project);
+            if (projectContent) projectContent.style.display = "block";
+        });
+    });
+
+    // ------------------ Open first top-level tab by default ------------------
+    if (tabButtons.length > 0) tabButtons[0].click();
 });
