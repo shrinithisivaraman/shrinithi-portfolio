@@ -1816,14 +1816,14 @@ input, select, textarea {
   display: block;
 }
 
-/* ------------------ Work Section ------------------ */
+/* -------------------- Work Section -------------------- */
 
-/* Main Pills */
+/* Main Category Pills */
 .work-pill {
   display: inline-block;
   padding: 10px 20px;
   margin: 5px;
-  background: #2a2a2a; /* matches other sections */
+  background: #2a2a2a;
   color: #ffffff;
   border-radius: 5px;
   text-decoration: none;
@@ -1834,11 +1834,7 @@ input, select, textarea {
   background: #444;
 }
 
-.work-pill:focus {
-  outline: none; /* removes blue highlight */
-}
-
-/* Project Links inside Categories */
+/* Project Links */
 .project-link {
   display: inline-block;
   padding: 8px 16px;
@@ -1847,15 +1843,10 @@ input, select, textarea {
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
-  transition: background 0.3s;
 }
 
 .project-link:hover {
   background: #555;
-}
-
-.project-link:focus {
-  outline: none;
 }
 
 /* Back Links */
@@ -1888,39 +1879,30 @@ input, select, textarea {
   line-height: 1.4;
 }
 
-/* ------------------ Show/Hide Sections Using CSS :target ------------------ */
-
-/* Hide all category sections and project content by default */
+/* Hide all sections by default except main categories */
 .category-section,
 .project-content {
   display: none;
 }
 
-/* Show the targeted section */
-.category-section:target,
-.project-content:target {
+/* Show section if its ID matches the hash */
+:target.category-section {
   display: block;
 }
 
-/* Show main work categories if no target is selected */
-#work:not(:target) .work-categories {
+/* Show project content if its ID matches the hash */
+:target.project-content {
   display: block;
 }
 
-/* Hide the main categories when a category is selected */
-.category-section:target ~ .work-categories,
-.project-content:target ~ .work-categories {
-  display: none;
-}
-
-/* ------------------ Responsive ------------------ */
+/* Responsive */
 @media (max-width: 768px) {
   .work-pill,
   .project-link {
     width: 100%;
     text-align: center;
   }
-  
+
   .project-images img {
     max-width: 100%;
   }
