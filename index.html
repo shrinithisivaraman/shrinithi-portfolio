@@ -61,12 +61,13 @@
         
 
 						<!-- Work Section -->
+                       
                            <article id="work">
                            <h2 class="major">Work</h2>
 
                            <!-- Top-level category tabs -->
                            <div class="tab">
-                           <button class="tablinks" onclick="openCategory(event, 'SPSS')">SPSS</button>
+                           <button class="tablinks" data-category="SPSS">SPSS</button>
                            <!-- Future categories can be added here -->
                            </div>
 
@@ -75,7 +76,7 @@
 
                            <!-- Nested project tabs (sub-pills) -->
                            <div class="subtab">
-                           <button class="subtablinks" onclick="openProject(event, 'AIQ')">AIQ Project</button>
+                           <button class="subtablinks" data-project="AIQ">AIQ Project</button>
                            <!-- Future SPSS projects can be added here -->
                            </div>
 
@@ -119,7 +120,6 @@
 
                            </div>
                            </article>
-
 
 						<!-- Skills -->
                             <article id="skills">
@@ -471,6 +471,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 	</body>
 </html>
+
 
 
 
