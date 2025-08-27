@@ -1801,11 +1801,13 @@ input, select, textarea {
     display: flex;
     gap: 10px;
     margin-bottom: 1rem;
+    flex-wrap: wrap;
 }
 
 .tab button, .subtab button {
-    background-color: #f4f4f4; /* neutral, no bright blue */
-    border: 1px solid #ccc;
+    background-color: #222;  /* matches site sections */
+    color: #fff;
+    border: 1px solid #444;
     padding: 8px 20px;
     cursor: pointer;
     font-weight: 500;
@@ -1814,58 +1816,62 @@ input, select, textarea {
 }
 
 .tab button:hover, .subtab button:hover {
-    background-color: #e0e0e0;
+    background-color: #444;
 }
 
 .tab button.active, .subtab button.active {
-    background-color: #444; /* dark gray instead of blue */
-    color: white;
+    background-color: #555;
+    color: #fff;
 }
 
 /* Tab content */
 .tabcontent, .subtabcontent {
     display: none;
-    padding: 20px;
-    border: none;
-    background-color: #1a1a1a; /* dark section like other sections */
-    color: #f4f4f4; /* light text for readability */
-    margin-bottom: 2rem;
+    padding: 15px;
+    border-top: none;
 }
 
-/* Summary boxes */
+/* Background matches intro/contact sections */
+#work {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+/* Project summary */
 .project-summary, .analysis-summary {
-    background: ##222;
-    color: #f4f4f4;
+    background: #2a2a2a;
     padding: 15px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     border-left: 4px solid #2a9df4;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
 /* Images */
-.image.main img {
-    width: 100%;
-    display: block;
-    margin: 1rem 0;
-    border-radius: 5px;
-    box-shadow: 0px 2px 6px rgba(0,0,0,0.5);
+.image {
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
-/* Align headings with content */
-.tabcontent h3, .subtabcontent h4, .subtabcontent p {
-    margin-bottom: 1rem;
-    line-height: 1.6;
+.image img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+}
+
+.image figcaption {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    color: #ccc;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .tab, .subtab {
-        flex-wrap: wrap;
-    }
     .tab button, .subtab button {
         width: 100%;
-        margin-bottom: 5px;
+    }
+    .image img {
+        width: 100%;
     }
 }
-
-
