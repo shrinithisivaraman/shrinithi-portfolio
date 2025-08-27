@@ -1806,7 +1806,7 @@ input, select, textarea {
 .project-pill {
   display: inline-block;
   padding: 10px 20px;
-  background: #2a2a2a;
+  background: #2a2a2a; /* dark background to match other sections */
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
@@ -1902,6 +1902,7 @@ input, select, textarea {
   color: #ddd;
 }
 
+/* Show content of selected tool tab */
 #tool-spss:checked ~ #spss-content,
 #tool-excel:checked ~ #excel-content,
 #tool-word:checked ~ #word-content {
@@ -1922,3 +1923,4 @@ input, select, textarea {
     text-align: center;
   }
 }
+
