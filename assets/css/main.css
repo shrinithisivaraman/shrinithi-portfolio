@@ -1793,4 +1793,94 @@ input, select, textarea {
     .skills-category-section h3 {
         text-align: center;
     }
+	
+}
+
+/* ------------------ Top-level category tabs ------------------ */
+.tab {
+    overflow: hidden;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+.tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    border-bottom: 3px solid #2a9df4;
+    font-weight: bold;
+}
+
+/* ------------------ Nested project tabs ------------------ */
+.subtab {
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+.subtab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 6px 15px;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.subtab button:hover {
+    background-color: #eee;
+}
+
+.subtab button.active {
+    border-bottom: 2px solid #2a9df4;
+    font-weight: bold;
+}
+
+/* ------------------ Content containers ------------------ */
+.tabcontent, .subtabcontent {
+    display: none;  /* Hidden by default */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-top: none;
+    animation: fadeEffect 0.5s;
+}
+
+/* Fade-in animation for smooth transition */
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* ------------------ Image styling ------------------ */
+.image.main img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.15);
+}
+
+/* ------------------ Project Summary Styling ------------------ */
+.project-summary {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #2a9df4;
+    border-radius: 4px;
+}
+
+.project-summary p {
+    margin: 0.5rem 0;
 }
