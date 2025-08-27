@@ -1816,45 +1816,37 @@ input, select, textarea {
   display: block;
 }
 
-/* -------------------- Work Section -------------------- */
+/* Project Pills */
+.project-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
 
-/* Main Category Pills */
-.work-pill {
+.project-pill {
   display: inline-block;
   padding: 10px 20px;
-  margin: 5px;
-  background: #2a2a2a;
-  color: #ffffff;
+  background: #2a2a2a; /* match other sections */
+  color: #fff;
   border-radius: 5px;
   text-decoration: none;
   transition: background 0.3s;
 }
 
-.work-pill:hover {
+.project-pill:hover {
   background: #444;
 }
 
-/* Project Links */
-.project-link {
-  display: inline-block;
-  padding: 8px 16px;
-  margin: 5px 0;
-  background: #333;
-  color: #fff;
-  border-radius: 5px;
-  text-decoration: none;
+/* Project Section */
+.project-section {
+  display: none; /* hidden by default */
+  margin-top: 30px;
 }
 
-.project-link:hover {
-  background: #555;
-}
-
-/* Back Links */
-.back {
-  display: inline-block;
-  margin: 10px 0;
-  text-decoration: underline;
-  color: #2a9df4;
+/* Show section when targeted by anchor */
+.project-section:target {
+  display: block;
 }
 
 /* Project Images */
@@ -1879,30 +1871,20 @@ input, select, textarea {
   line-height: 1.4;
 }
 
-/* Hide all sections by default except main categories */
-.category-section,
-.project-content {
-  display: none;
-}
-
-/* Show section if its ID matches the hash */
-:target.category-section {
-  display: block;
-}
-
-/* Show project content if its ID matches the hash */
-:target.project-content {
-  display: block;
+/* Back Link */
+.back {
+  display: inline-block;
+  margin-top: 20px;
+  color: #2a9df4;
+  text-decoration: underline;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .work-pill,
-  .project-link {
-    width: 100%;
-    text-align: center;
+  .project-pills {
+    flex-direction: column;
+    gap: 10px;
   }
-
   .project-images img {
     max-width: 100%;
   }
