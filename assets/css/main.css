@@ -1797,7 +1797,7 @@ input, select, textarea {
 }
 /* Work Section */
 #work {
-  background-color: #1c1c1c; /* Same as other sections */
+  background-color: #222; 
   color: #fff;
   padding: 50px 20px;
 }
@@ -1888,3 +1888,4 @@ figcaption {
     width: 100%;
   }
 }
+
