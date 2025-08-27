@@ -64,48 +64,78 @@
                         <!-- Work Section -->
                                 <article id="work">
                                 <h2 class="major">Work</h2>
-
-                                <!-- Project Pills -->
+                        <!-- Project Pills -->
                                 <div class="project-pills">
                                 <a href="#aiq" class="project-pill">AIQ Limited</a>
                                 <a href="#project2" class="project-pill">Project 2</a>
                                 <a href="#project3" class="project-pill">Project 3</a>
                                 </div>
-
-                                <!-- AIQ Project -->
+                        <!-- AIQ Project -->
                                 <section id="aiq" class="project-section">
+                                <a href="#work" class="back">← Back to Projects</a>
                                 <h3>AIQ International Sales Analysis</h3>
-                                <p><strong>Tools Used:</strong> Excel, SPSS, Word</p>
-                                <p>The project predicted international sales profitability and identified high-value customer segments for AIQ Limited. Key markets: Germany, France, Eire. Key product: Gift Vouchers. Insights provided actionable recommendations for international expansion.</p>
-
-                                <div class="project-images">
-                                <figure>
-                                <img src="images/ann_model1.png" alt="Initial ANN Model Summary">
-                                <figcaption>Initial ANN model showing predictors of sales profitability.</figcaption>
-                                </figure>
-                                <figure>
+                                <p><strong>Tools Used:</strong></p>
+                        <!-- CSS Tabs for Tools -->
+                                <div class="tool-tabs">
+                                <input type="radio" id="tool-spss" name="aiq-tools" checked>
+                                <label for="tool-spss">SPSS</label>
+                                <input type="radio" id="tool-excel" name="aiq-tools">
+                                <label for="tool-excel">Excel</label>
+                                <input type="radio" id="tool-word" name="aiq-tools">
+                                <label for="tool-word">Word</label>
+                                <div class="tab-content" id="spss-content">
+                                <p>SPSS was used to run Artificial Neural Network (ANN) models to predict international sales profitability, perform cluster analysis to segment customers, and conduct crosstab analysis to compare UK vs non-UK markets.</p>
+                                </div>
+                                <div class="tab-content" id="excel-content">
+                                <p>Excel helped visualise key performance metrics, generate pivot tables for product profitability, and present market comparison insights clearly for stakeholders.</p>
+                                </div>
+								<div class="tab-content" id="word-content">
+								<p>Word was used to prepare the final stakeholder report with actionable insights, ensuring non-technical teams could easily understand AIQ's international growth opportunities.</p>
+								</div>
+								</div>
+						<!-- Project Summary for Stakeholders -->
+								<div class="project-description">
+								<p>The AIQ Limited project aimed to identify the most profitable international markets and customer segments. Analysis showed:</p>
+								<ul>
+								<li>Germany, France, and Eire are the top non-UK markets for expansion.</li>
+								<li>Gift Vouchers are the key product driving international profitability.</li>
+								<li>Cluster 2 represents the most valuable non-UK customer segment.</li>
+								</ul>
+								<p>These insights enable AIQ to prioritise marketing efforts and allocate resources effectively for strategic international growth.</p>
+								</div>
+						<!-- Project Images -->
+								<div class="project-images">
+								<figure>
+								<img src="images/ann_model1.png" alt="Initial ANN Model Summary">
+								<figcaption>Initial ANN model showing key predictors of sales profitability.</figcaption>
+							    </figure>
+								<figure>
                                 <img src="images/ann_model2.png" alt="Tuned ANN Model Summary">
                                 <figcaption>Tuned ANN model showing improved prediction accuracy.</figcaption>
                                 </figure>
+                                <figure>
+                                <img src="images/ann_predictor_importance.png" alt="ANN Predictor Importance">
+                                <figcaption>Factors most affecting profitability: Quantity and Unit Price.</figcaption>
+                                </figure>
+                                <figure>
+                                <img src="images/crosstab_uk_nonuk.png" alt="UK vs Non-UK Profitability">
+                                <figcaption>Comparison of UK and non-UK market profitability.</figcaption>
+                                </figure>
                                 </div>
-
-                                <a href="#work" class="back">← Back to Projects</a>
                                 </section>
-
-                                <!-- Project 2 -->
+                        <!-- Project 2 -->
                                 <section id="project2" class="project-section">
+                                <a href="#work" class="back">← Back to Projects</a>
                                 <h3>Project 2 Name</h3>
                                 <p>Short description of Project 2.</p>
-                                <a href="#work" class="back">← Back to Projects</a>
                                 </section>
-
-                                <!-- Project 3 -->
+						<!-- Project 3 -->
                                 <section id="project3" class="project-section">
+                                <a href="#work" class="back">← Back to Projects</a>
                                 <h3>Project 3 Name</h3>
                                 <p>Short description of Project 3.</p>
-                                <a href="#work" class="back">← Back to Projects</a>
                                 </section>
-                                </article>
+                        </article>
 
 						<!-- Skills -->
                             <article id="skills">
@@ -457,6 +487,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 	</body>
 </html>
+
 
 
 
