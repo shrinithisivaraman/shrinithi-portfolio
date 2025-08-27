@@ -1806,7 +1806,7 @@ input, select, textarea {
 .project-pill {
   display: inline-block;
   padding: 10px 20px;
-  background: #2a2a2a; /* dark background to match other sections */
+  background: #2a2a2a; /* match your site's sections */
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
@@ -1823,9 +1823,15 @@ input, select, textarea {
   margin-top: 30px;
 }
 
-/* Show targeted project only */
+/* Show only the targeted project section */
 .project-section:target {
   display: block;
+}
+
+/* Hide project pills when a project is targeted */
+.project-pills:target ~ .project-section,
+.project-section:target ~ .project-pills {
+  display: none;
 }
 
 /* Back Links */
@@ -1866,49 +1872,6 @@ input, select, textarea {
   line-height: 1.6;
 }
 
-/* Tool Tabs */
-.tool-tabs {
-  display: flex;
-  flex-direction: column;
-  margin-top: 15px;
-}
-
-.tool-tabs input[type="radio"] {
-  display: none;
-}
-
-.tool-tabs label {
-  padding: 8px 16px;
-  background: #333;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  display: inline-block;
-  transition: background 0.3s;
-}
-
-.tool-tabs label:hover {
-  background: #555;
-}
-
-.tab-content {
-  display: none;
-  padding: 10px;
-  margin-top: 10px;
-  background: #222;
-  border-radius: 5px;
-  color: #ddd;
-}
-
-/* Show content of selected tool tab */
-#tool-spss:checked ~ #spss-content,
-#tool-excel:checked ~ #excel-content,
-#tool-word:checked ~ #word-content {
-  display: block;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .project-pills {
@@ -1918,9 +1881,4 @@ input, select, textarea {
   .project-images img {
     max-width: 100%;
   }
-  .tool-tabs label {
-    width: 100%;
-    text-align: center;
-  }
 }
-
