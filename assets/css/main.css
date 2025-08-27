@@ -1797,80 +1797,45 @@ input, select, textarea {
 }
 
 /* ------------------ Tabs ------------------ */
-
-/* Top-level tabs */
-.tab {
+.tab, .subtab {
     display: flex;
     gap: 10px;
     margin-bottom: 1rem;
 }
 
-.tab button {
-    background-color: #f4f4f4;
-    border: none;
+.tab button, .subtab button {
+    background-color: #f4f4f4; /* neutral, no bright blue */
+    border: 1px solid #ccc;
     padding: 8px 20px;
     cursor: pointer;
     font-weight: 500;
-    border-radius: 5px 5px 0 0;
-    transition: background 0.3s;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
 }
 
-.tab button:hover {
+.tab button:hover, .subtab button:hover {
     background-color: #e0e0e0;
 }
 
-.tab button.active {
-    background-color: #2a9df4;
-    color: white;
-}
-
-/* Sub-tabs */
-.subtab {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 1rem;
-}
-
-.subtab button {
-    background-color: #fafafa;
-    border: 1px solid #ccc;
-    padding: 5px 15px;
-    cursor: pointer;
-    border-radius: 5px 5px 0 0;
-    transition: background 0.3s;
-}
-
-.subtab button:hover {
-    background-color: #eee;
-}
-
-.subtab button.active {
-    background-color: #2a9df4;
+.tab button.active, .subtab button.active {
+    background-color: #444; /* dark gray instead of blue */
     color: white;
 }
 
 /* Tab content */
-.tabcontent,
-.subtabcontent {
+.tabcontent, .subtabcontent {
     display: none;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-top: none;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    padding: 20px;
+    border: none;
+    background-color: #1a1a1a; /* dark section like other sections */
+    color: #f4f4f4; /* light text for readability */
+    margin-bottom: 2rem;
 }
 
 /* Summary boxes */
-.project-summary {
-    background: #f9f9f9;
-    padding: 15px;
-    margin-bottom: 1rem;
-    border-left: 4px solid #2a9df4;
-    border-radius: 4px;
-}
-
-.analysis-summary {
-    background: #eef6fb;
+.project-summary, .analysis-summary {
+    background: #2a2a2a;
+    color: #f4f4f4;
     padding: 15px;
     margin-bottom: 1rem;
     border-left: 4px solid #2a9df4;
@@ -1880,21 +1845,25 @@ input, select, textarea {
 /* Images */
 .image.main img {
     width: 100%;
-    margin-bottom: 1rem;
+    display: block;
+    margin: 1rem 0;
     border-radius: 5px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.5);
+}
+
+/* Align headings with content */
+.tabcontent h3, .subtabcontent h4, .subtabcontent p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .tab,
-    .subtab {
+    .tab, .subtab {
         flex-wrap: wrap;
     }
-    .tab button,
-    .subtab button {
+    .tab button, .subtab button {
         width: 100%;
-        box-sizing: border-box;
         margin-bottom: 5px;
     }
 }
