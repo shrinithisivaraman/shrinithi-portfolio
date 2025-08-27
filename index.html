@@ -59,94 +59,98 @@
                                 </div>
                             </article>
         
-<!-- Work Section -->
 <article id="work">
   <h2 class="major">Work</h2>
 
-  <!-- Project Pills -->
-  <div class="project-pills">
-    <a href="#aiq" class="project-pill">AIQ Limited</a>
-    <a href="#project2" class="project-pill">Project 2</a>
-    <a href="#project3" class="project-pill">Project 3</a>
+  <!-- Container for pills and project sections -->
+  <div class="work-container">
+    <!-- Project Pills -->
+    <div class="project-pills" id="project-list">
+      <a href="#aiq" class="project-pill">AIQ Limited</a>
+      <a href="#project2" class="project-pill">Project 2</a>
+      <a href="#project3" class="project-pill">Project 3</a>
+    </div>
+
+    <!-- AIQ Project -->
+    <section id="aiq" class="project-section">
+      <a href="#project-list" class="back">← Back to Projects</a>
+      <h3>AIQ International Sales Analysis</h3>
+      <p><strong>Tools Used:</strong> Excel, SPSS, Word</p>
+
+      <!-- Project Summary for Stakeholders -->
+      <div class="project-description">
+        <p>The AIQ Limited project aimed to identify the most profitable international markets and key customer segments. The analysis revealed:</p>
+        <ul>
+          <li>Germany, France, and Eire are the top non-UK markets for expansion.</li>
+          <li>Gift Vouchers are the key product driving international profitability.</li>
+          <li>Cluster 2 represents the most valuable non-UK customer segment.</li>
+        </ul>
+        <p>These insights allow AIQ to prioritise marketing efforts and allocate resources effectively for strategic international growth.</p>
+      </div>
+
+      <!-- Project Images with Captions -->
+      <div class="project-images">
+        <figure>
+          <img src="images/ann_model1.png" alt="Initial ANN Model Summary">
+          <figcaption>Initial ANN model summarising predictors of international sales profitability.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/ann_model2.png" alt="Tuned ANN Model Summary">
+          <figcaption>Tuned ANN model showing improved prediction accuracy.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/ann_predictor_importance.png" alt="ANN Predictor Importance">
+          <figcaption>Analysis of the most important predictors affecting sales profitability: Quantity and Unit Price.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/crosstab_uk_nonuk.png" alt="UK vs Non-UK Profitability">
+          <figcaption>Crosstab comparing UK vs non-UK market profitability.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/crosstab_top_countries.png" alt="Top Non-UK Countries Profitability">
+          <figcaption>Top non-UK countries identified as the most profitable markets for expansion.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/product_profitability.png" alt="Product Profitability">
+          <figcaption>Gift Vouchers highlighted as the key product driving international profits.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/cluster_summary_initial.png" alt="Initial Cluster Summary">
+          <figcaption>Initial customer segmentation using cluster analysis to understand buying behavior.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/cluster_sizes_initial.png" alt="Initial Cluster Sizes">
+          <figcaption>Distribution of customers across clusters for initial segmentation.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/cluster_characteristics.png" alt="Cluster Characteristics Table">
+          <figcaption>Detailed characteristics of each cluster for targeted marketing strategy.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/cluster_summary_tuned.png" alt="Tuned Cluster Summary">
+          <figcaption>Tuned cluster analysis highlighting the most valuable international segments.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/cluster_sizes_tuned.png" alt="Tuned Cluster Sizes">
+          <figcaption>Refined cluster sizes showing prioritised non-UK segments for international sales.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Project 2 -->
+    <section id="project2" class="project-section">
+      <a href="#project-list" class="back">← Back to Projects</a>
+      <h3>Project 2 Name</h3>
+      <p>Short description of Project 2.</p>
+    </section>
+
+    <!-- Project 3 -->
+    <section id="project3" class="project-section">
+      <a href="#project-list" class="back">← Back to Projects</a>
+      <h3>Project 3 Name</h3>
+      <p>Short description of Project 3.</p>
+    </section>
   </div>
-
-  <!-- AIQ Project -->
-  <section id="aiq" class="project-section">
-    <a href="#work" class="back">← Back to Projects</a>
-    <h3>AIQ International Sales Analysis</h3>
-    <p><strong>Tools Used:</strong> SPSS, Excel, Word</p>
-
-    <div class="project-description">
-      <p>The AIQ Limited project aimed to identify the most profitable international markets and customer segments. Analysis showed:</p>
-      <ul>
-        <li>Germany, France, and Eire are the top non-UK markets for expansion.</li>
-        <li>Gift Vouchers are the key product driving international profitability.</li>
-        <li>Cluster 2 represents the most valuable non-UK customer segment for targeting.</li>
-      </ul>
-      <p>These insights enable AIQ to prioritise marketing efforts and allocate resources effectively for strategic international growth.</p>
-    </div>
-
-    <div class="project-images">
-      <figure>
-        <img src="images/ann_model1.png" alt="Initial ANN Model Summary">
-        <figcaption>Initial ANN model showing predictors of international sales profitability.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/ann_model2.png" alt="Tuned ANN Model Summary">
-        <figcaption>Tuned ANN model showing improved prediction accuracy.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/ann_predictor_importance.png" alt="ANN Predictor Importance">
-        <figcaption>Analysis of the most important factors affecting profitability: Quantity and Unit Price.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/crosstab_uk_nonuk.png" alt="UK vs Non-UK Profitability">
-        <figcaption>Comparative profitability analysis of UK vs non-UK markets.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/crosstab_top_countries.png" alt="Top Non-UK Countries Profitability">
-        <figcaption>Top non-UK countries identified as profitable markets for AIQ.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/product_profitability.png" alt="Product Profitability">
-        <figcaption>Gift Vouchers identified as key product driving profits internationally.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/cluster_summary_initial.png" alt="Initial Cluster Summary">
-        <figcaption>Overview of customer clusters from initial analysis.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/cluster_sizes_initial.png" alt="Initial Cluster Sizes">
-        <figcaption>Sizes of each cluster to understand distribution of customers.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/cluster_characteristics.png" alt="Cluster Characteristics Table">
-        <figcaption>Characteristics of each cluster to guide targeting strategy.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/cluster_summary_tuned.png" alt="Tuned Cluster Summary">
-        <figcaption>Tuned cluster analysis highlighting key international segments.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/cluster_sizes_tuned.png" alt="Tuned Cluster Sizes">
-        <figcaption>Refined cluster sizes showing prioritised customer segments.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- Project 2 -->
-  <section id="project2" class="project-section">
-    <a href="#work" class="back">← Back to Projects</a>
-    <h3>Project 2 Name</h3>
-    <p>Short description of Project 2.</p>
-  </section>
-
-  <!-- Project 3 -->
-  <section id="project3" class="project-section">
-    <a href="#work" class="back">← Back to Projects</a>
-    <h3>Project 3 Name</h3>
-    <p>Short description of Project 3.</p>
-  </section>
 </article>
 						
                         
