@@ -1795,83 +1795,96 @@ input, select, textarea {
     }
 	
 }
-
-/* ------------------ Tabs ------------------ */
-.tab, .subtab {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
-}
-
-.tab button, .subtab button {
-    background-color: #222;  /* matches site sections */
-    color: #fff;
-    border: 1px solid #444;
-    padding: 8px 20px;
-    cursor: pointer;
-    font-weight: 500;
-    border-radius: 5px;
-    transition: background 0.3s, color 0.3s;
-}
-
-.tab button:hover, .subtab button:hover {
-    background-color: #444;
-}
-
-.tab button.active, .subtab button.active {
-    background-color: #555;
-    color: #fff;
-}
-
-/* Tab content */
-.tabcontent, .subtabcontent {
-    display: none;
-    padding: 15px;
-    border-top: none;
-}
-
-/* Background matches intro/contact sections */
+/* Work Section */
 #work {
-    background-color: #1c1c1c;
-    color: #fff;
-    padding: 50px 20px;
+  background-color: #1c1c1c; /* Same as other sections */
+  color: #fff;
+  padding: 50px 20px;
 }
 
-/* Project summary */
-.project-summary, .analysis-summary {
-    background: #2a2a2a;
-    padding: 15px;
-    margin-bottom: 1.5rem;
-    border-left: 4px solid #2a9df4;
-    border-radius: 5px;
+/* Top-level Tabs */
+.tab {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.tab button {
+  background: #333;
+  border: none;
+  color: #fff;
+  padding: 8px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  background: #555;
+}
+
+.tab button.active {
+  background: #2a9df4;
+}
+
+/* Sub-tabs */
+.subtab {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.subtab button {
+  background: #444;
+  border: none;
+  color: #fff;
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.subtab button:hover {
+  background: #666;
+}
+
+.subtab button.active {
+  background: #2a9df4;
+}
+
+/* Tab Content */
+.tabcontent, .subtabcontent {
+  display: none;
 }
 
 /* Images */
-.image {
-    margin-bottom: 1.5rem;
-    text-align: center;
+figure {
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-.image img {
-    width: 80%;
-    max-width: 600px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+figure img {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 5px;
 }
 
-.image figcaption {
-    font-size: 0.9rem;
-    margin-top: 5px;
-    color: #ccc;
+figcaption {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-top: 5px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .tab button, .subtab button {
-        width: 100%;
-    }
-    .image img {
-        width: 100%;
-    }
+  figure img {
+    width: 100%;
+  }
+  .tab, .subtab {
+    flex-wrap: wrap;
+  }
+  .tab button, .subtab button {
+    width: 100%;
+  }
 }
